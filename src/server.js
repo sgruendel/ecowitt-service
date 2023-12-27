@@ -26,7 +26,7 @@ const logger = winston.createLogger({
 const db = require('./db');
 
 var server = http.createServer((req, res) => {
-    logger.info('req', req);
+    logger.info('req: ' + req);
 
     if (req.method === 'POST' && req.url === '/data/report/') {
         var body = '';
@@ -35,7 +35,7 @@ var server = http.createServer((req, res) => {
         });
         req.on('end', () => {
             const report = querystring.decode(body);
-            logger.info('data: ', report);
+            logger.info('data: ' + report);
             db.Report.create(report);
             res.writeHead(201);
             res.end();
