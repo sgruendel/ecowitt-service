@@ -1,0 +1,62 @@
+{
+    "name": "ecowitt-service",
+    "version": "1.0.0",
+    "description": "Linux service to store Ecowitt weather data in mongodb",
+    "main": "server.js",
+    "scripts": {
+        "reinstall": "rm -rf ./node_modules && npm install",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sgruendel/ecowitt-service.git"
+    },
+    "keywords": [
+        "ecowitt",
+        "weather",
+        "mongodb"
+    ],
+    "author": "Stefan",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/sgruendel/ecowitt-service/issues"
+    },
+    "homepage": "https://github.com/sgruendel/ecowitt-service#readme",
+    "dependencies": {
+        "mongoose": "^8.0.3",
+        "winston": "^3.11.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "eslint-config-strongloop": "^2.1.0"
+    },
+    "eslintConfig": {
+        "parserOptions": {
+            "ecmaVersion": 2020
+        },
+        "extends": "strongloop",
+        "env": {
+            "es6": true,
+            "node": true,
+            "mocha": true
+        },
+        "rules": {
+            "indent": [
+                "error",
+                4
+            ],
+            "max-len": [
+                "error",
+                120,
+                4,
+                {
+                    "ignoreComments": true,
+                    "ignoreUrls": true,
+                    "ignoreStrings": true,
+                    "ignorePattern": "^\\s*var\\s.+=\\s*(require\\s*\\()|(/)"
+                }
+            ]
+        }
+    }
+}
+
