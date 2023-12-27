@@ -8,16 +8,7 @@ const logger = winston.createLogger({
     level: process.env.LOG_LEVEL || 'info',
     transports: [
         new winston.transports.Console({
-            format: winston.format.combine(
-                winston.format.timestamp({
-                    format: 'YYYY-MM-DD HH:mm:ss:SSS',
-                }),
-                winston.format.printf(
-                    (info) =>
-                        `${info.timestamp} ${info.level}: ${info.message}` +
-                        (info.splat !== undefined ? `${info.splat}` : ' '),
-                ),
-            ),
+            format: winston.format.simple(),
         }),
     ],
     exitOnError: false,
@@ -26,7 +17,7 @@ const logger = winston.createLogger({
 const db = require('./db');
 
 var server = http.createServer((req, res) => {
-    logger.info('req: ' + req);
+    logger.info('req', req);
 
     if (req.method === 'POST' && req.url === '/data/report/') {
         var body = '';
