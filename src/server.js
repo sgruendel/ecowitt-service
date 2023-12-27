@@ -35,7 +35,7 @@ var server = http.createServer((req, res) => {
         });
         req.on('end', () => {
             const report = querystring.decode(body);
-            logger.info('data: ' + report);
+            logger.info('data', report);
             db.Report.create(report);
             res.writeHead(201);
             res.end();
