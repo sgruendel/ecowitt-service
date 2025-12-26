@@ -23,11 +23,11 @@
     },
     "homepage": "https://github.com/sgruendel/ecowitt-service#readme",
     "dependencies": {
-        "mongoose": "^9.0.0",
-        "winston": "^3.11.0"
+        "mongoose": "^9.0.2",
+        "winston": "^3.19.0"
     },
     "devDependencies": {
-        "eslint": "^9.0.0",
+        "eslint": "^9.39.2",
         "eslint-config-strongloop": "^2.1.0"
     },
     "eslintConfig": {
