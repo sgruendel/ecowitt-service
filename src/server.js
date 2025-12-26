@@ -28,6 +28,8 @@ var server = http.createServer((req, res) => {
             const report = querystring.decode(body);
             logger.info('data', report);
             db.Report.create(report);
+
+            // respond with 201 Created as create() is async and we don't know the result yet
             res.writeHead(201);
             res.end();
         });
