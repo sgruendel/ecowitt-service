@@ -1,8 +1,6 @@
-'use strict';
-
-const http = require('http');
-const querystring = require('querystring');
-const winston = require('winston');
+import http from 'http';
+import querystring from 'querystring';
+import winston from 'winston';
 
 const logger = winston.createLogger({
     level: process.env.LOG_LEVEL || 'info',
@@ -14,13 +12,13 @@ const logger = winston.createLogger({
     exitOnError: false,
 });
 
-const db = require('./db');
+import db from './db.js';
 
-var server = http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
     logger.info('req', req);
 
     if (req.method === 'POST' && req.url === '/data/report/') {
-        var body = '';
+        let body = '';
         req.on('data', (data) => {
             body += data;
         });

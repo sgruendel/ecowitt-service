@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Linux service to store Ecowitt weather data in mongodb",
     "main": "server.js",
+    "type": "module",
     "scripts": {
         "reinstall": "rm -rf ./node_modules && npm install",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,40 +24,12 @@
     },
     "homepage": "https://github.com/sgruendel/ecowitt-service#readme",
     "dependencies": {
-        "mongoose": "^9.1.1",
+        "mongoose": "^9.1.6",
         "winston": "^3.19.0"
     },
     "devDependencies": {
-        "eslint": "^9.39.2",
-        "eslint-config-strongloop": "^2.1.0"
-    },
-    "eslintConfig": {
-        "parserOptions": {
-            "ecmaVersion": 2020
-        },
-        "extends": "strongloop",
-        "env": {
-            "es6": true,
-            "node": true,
-            "mocha": true
-        },
-        "rules": {
-            "indent": [
-                "error",
-                4
-            ],
-            "max-len": [
-                "error",
-                120,
-                4,
-                {
-                    "ignoreComments": true,
-                    "ignoreUrls": true,
-                    "ignoreStrings": true,
-                    "ignorePattern": "^\\s*var\\s.+=\\s*(require\\s*\\()|(/)"
-                }
-            ]
-        }
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.0.0",
+        "globals": "^17.3.0"
     }
 }
-
