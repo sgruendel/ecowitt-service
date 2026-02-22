@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Environment="MY_PORT=9100"
 Type=simple
-ExecStart=/usr/bin/node /home/stefan/src/github/ecowitt-service/src/server.js
+ExecStart=/home/stefan/.local/share/mise/shims/node /home/stefan/src/github/ecowitt-service/src/server.js
 Restart=on-failure
 
 [Install]
