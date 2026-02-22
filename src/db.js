@@ -1,11 +1,7 @@
-'use strict';
-
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 mongoose.connect('mongodb://127.0.0.1:27017/ecowitt-service');
 
-var exports = module.exports = {};
-
-exports.disconnect = mongoose.disconnect;
+const disconnect = mongoose.disconnect;
 
 /*
  PASSKEY: '4885BE701185AF2C83886E1E37F74F2D',
@@ -143,5 +139,12 @@ const report = new mongoose.Schema(
         timestamps: true,
     },
 );
-report.index({ dateutc: -1});
-exports.Report = mongoose.model('Report', report);
+report.index({ dateutc: -1 });
+const Report = mongoose.model('Report', report);
+
+export { disconnect, Report };
+
+export default {
+    disconnect,
+    Report,
+};
