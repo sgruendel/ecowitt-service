@@ -1,12 +1,14 @@
 [Unit]
 Description=Ecowitt nodejs server
-After=network.target
 
 [Service]
 Environment="MY_PORT=9100"
+Environment="HOME=%h"
 Type=simple
-ExecStart=/home/stefan/.local/share/mise/shims/node /home/stefan/src/github/ecowitt-service/src/server.js
+WorkingDirectory=%h/src/github/ecowitt-service
+ExecStart=%h/.local/share/mise/shims/node %h/src/github/ecowitt-service/src/server.js
 Restart=on-failure
+RestartSec=5
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
