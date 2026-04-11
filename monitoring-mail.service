@@ -1,0 +1,7 @@
+[Unit]
+Description=Send daily monitoring mail for mongod and ecowitt
+
+[Service]
+Type=oneshot
+ExecStart=/home/stefan/.local/bin/monitoring.sh
+KillMode=process

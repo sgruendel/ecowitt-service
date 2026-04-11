@@ -1,0 +1,9 @@
+[Unit]
+Description=Run monitoring mail daily at 04:06
+
+[Timer]
+OnCalendar=*-*-* 04:06:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
