@@ -1,35 +1,35 @@
 {
-    "name": "ecowitt-service",
-    "version": "1.0.0",
-    "description": "Linux service to store Ecowitt weather data in mongodb",
-    "main": "server.js",
-    "type": "module",
-    "scripts": {
-        "reinstall": "rm -rf ./node_modules && npm install",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sgruendel/ecowitt-service.git"
-    },
-    "keywords": [
-        "ecowitt",
-        "weather",
-        "mongodb"
-    ],
-    "author": "Stefan",
-    "license": "GPL-3.0",
-    "bugs": {
-        "url": "https://github.com/sgruendel/ecowitt-service/issues"
-    },
-    "homepage": "https://github.com/sgruendel/ecowitt-service#readme",
-    "dependencies": {
-        "mongoose": "^9.8.0",
-        "winston": "^3.19.0"
-    },
-    "devDependencies": {
-        "@eslint/js": "^10.0.1",
-        "eslint": "^10.0.0",
-        "globals": "^17.3.0"
-    }
+  "name": "ecowitt-service",
+  "version": "1.0.0",
+  "description": "Linux service to store Ecowitt weather data in mongodb",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "reinstall": "rm -rf ./node_modules && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgruendel/ecowitt-service.git"
+  },
+  "keywords": [
+    "ecowitt",
+    "weather",
+    "mongodb"
+  ],
+  "author": "Stefan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sgruendel/ecowitt-service/issues"
+  },
+  "homepage": "https://github.com/sgruendel/ecowitt-service#readme",
+  "dependencies": {
+    "mongoose": "^9.8.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.0",
+    "globals": "^17.3.0"
+  }
 }

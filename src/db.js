@@ -32,112 +32,112 @@ const disconnect = mongoose.disconnect;
   model: 'WS1900'
 */
 const report = new mongoose.Schema(
-    {
-        stationtype: {
-            type: String,
-            required: true,
-        },
-        dateutc: {
-            type: Date,
-            required: true,
-        },
-        runtime: {
-            type: Number,
-            required: true,
-        },
-        tempinf: {
-            type: Number,
-            required: true,
-        },
-        humidityin: {
-            type: Number,
-            required: true,
-        },
-        baromrelin: {
-            type: Number,
-            required: true,
-        },
-        baromabsin: {
-            type: Number,
-            required: true,
-        },
-        tempf: {
-            type: Number,
-            required: true,
-        },
-        humidity: {
-            type: Number,
-            required: true,
-        },
-        winddir: {
-            type: Number,
-            required: true,
-        },
-        windspeedmph: {
-            type: Number,
-            required: true,
-        },
-        windgustmph: {
-            type: Number,
-            required: true,
-        },
-        maxdailygust: {
-            type: Number,
-            required: true,
-        },
-        rainratein: {
-            type: Number,
-            required: true,
-        },
-        eventrainin: {
-            type: Number,
-            required: true,
-        },
-        hourlyrainin: {
-            type: Number,
-            required: true,
-        },
-        dailyrainin: {
-            type: Number,
-            required: true,
-        },
-        weeklyrainin: {
-            type: Number,
-            required: true,
-        },
-        monthlyrainin: {
-            type: Number,
-            required: true,
-        },
-        yearlyrainin: {
-            type: Number,
-            required: true,
-        },
-        totalrainin: {
-            type: Number,
-            required: true,
-        },
-        ws1900batt: {
-            type: Number,
-            required: true,
-        },
-        wh65batt: {
-            type: Number,
-            required: true,
-        },
-        freq: {
-            type: String,
-            required: true,
-        },
-        model: {
-            type: String,
-            required: true,
-        },
+  {
+    stationtype: {
+      type: String,
+      required: true,
     },
-    {
-        autoCreate: true,
-        timestamps: true,
+    dateutc: {
+      type: Date,
+      required: true,
     },
+    runtime: {
+      type: Number,
+      required: true,
+    },
+    tempinf: {
+      type: Number,
+      required: true,
+    },
+    humidityin: {
+      type: Number,
+      required: true,
+    },
+    baromrelin: {
+      type: Number,
+      required: true,
+    },
+    baromabsin: {
+      type: Number,
+      required: true,
+    },
+    tempf: {
+      type: Number,
+      required: true,
+    },
+    humidity: {
+      type: Number,
+      required: true,
+    },
+    winddir: {
+      type: Number,
+      required: true,
+    },
+    windspeedmph: {
+      type: Number,
+      required: true,
+    },
+    windgustmph: {
+      type: Number,
+      required: true,
+    },
+    maxdailygust: {
+      type: Number,
+      required: true,
+    },
+    rainratein: {
+      type: Number,
+      required: true,
+    },
+    eventrainin: {
+      type: Number,
+      required: true,
+    },
+    hourlyrainin: {
+      type: Number,
+      required: true,
+    },
+    dailyrainin: {
+      type: Number,
+      required: true,
+    },
+    weeklyrainin: {
+      type: Number,
+      required: true,
+    },
+    monthlyrainin: {
+      type: Number,
+      required: true,
+    },
+    yearlyrainin: {
+      type: Number,
+      required: true,
+    },
+    totalrainin: {
+      type: Number,
+      required: true,
+    },
+    ws1900batt: {
+      type: Number,
+      required: true,
+    },
+    wh65batt: {
+      type: Number,
+      required: true,
+    },
+    freq: {
+      type: String,
+      required: true,
+    },
+    model: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    autoCreate: true,
+    timestamps: true,
+  },
 );
 report.index({ dateutc: -1 });
 const Report = mongoose.model('Report', report);
@@ -145,6 +145,6 @@ const Report = mongoose.model('Report', report);
 export { disconnect, Report };
 
 export default {
-    disconnect,
-    Report,
+  disconnect,
+  Report,
 };
