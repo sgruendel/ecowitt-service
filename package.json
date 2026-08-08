@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/sgruendel/ecowitt-service#readme",
   "dependencies": {
-    "mongoose": "^9.8.1",
+    "mongoose": "^9.9.1",
     "winston": "^3.19.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.8.0",
-    "globals": "^17.8.0"
+    "globals": "^17.9.0"
   }
 }
