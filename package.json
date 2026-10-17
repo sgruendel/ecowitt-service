@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/sgruendel/ecowitt-service#readme",
   "dependencies": {
-    "mongoose": "^9.11.1",
+    "mongoose": "^9.11.2",
     "winston": "^3.19.0"
   },
   "devDependencies": {
